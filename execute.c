@@ -24,7 +24,7 @@ int execute(char *app_name, char **args, char **envp)
 	{
 		if (args[0] == NULL)
 			return (1);
-		if (execve(locate_binary(args[0], envp), args, envp) == -1)
+		if (execve(locate_binary(args[0], envp)/*, args, envp*/, NULL, NULL) == -1)
 		{
 			perror(app_name);
 			return (0);
