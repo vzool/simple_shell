@@ -37,7 +37,7 @@ int shell(int argc, char *argv[], char *envp[])
 			free(args);
 
 		if (exit_command)
-			break;
+			exit(0);
 		if (env_command)
 			status = print_env(envp), env_command = 0;
 
