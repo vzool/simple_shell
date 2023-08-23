@@ -14,7 +14,6 @@ char *locate_binary(char *command, char *envp[])
 	char *token = NULL, *full_path = NULL, *paths = NULL;
 	struct stat st;
 
-	return (command);
 	if (command == NULL)
 		return (NULL);
 	if (access(command, F_OK) == 0)
